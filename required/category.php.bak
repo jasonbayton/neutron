@@ -1,0 +1,73 @@
+<?php
+    $mdfiles = glob($settings ["sitepath"] . '/content/' . $pwd . '/*.md');
+    $emptycat = "<div class=\"bs-callout bs-callout-danger\">
+		<h4>No documents available</h4>
+		<p>There are no documents in this category. Try another below.</p>
+		</div>";
+
+	if (empty($mdfiles)) {
+        $mdfiles = glob($settings ["sitepath"] . '/content' . dirname($_SERVER['REQUEST_URI']) . '/*.md');
+	$prevdir = rtrim(dirname($_SERVER['REQUEST_URI']),"/");
+	echo $emptycat;
+	foreach( $mdfiles as $naventry ) {
+        $slug = substr($naventry,0,-3);
+	$navcontent = file_get_contents($naventry);
+	$parser = new Mni\FrontYAML\Parser();
+	$nav_raw = $parser->parse($navcontent);
+	$nav_settings = $nav_raw->getYAML();
+		echo '<li><a href="'.($settings ["siteurl"]).$prevdir. '/'
+        .basename($slug).'"><h3>'
+        .$nav_settings ["title"].'</h3></a>'
+	.'<i class="fa fa-calendar"></i> '.$nav_settings ["date"]
+	.'<i class="fa fa-file-o"></i> '.$nav_settings ["contenttype"].'<br />'
+	.'<i class="fa fa-user"></i> '.$nav_settings ["author"].'</li>'.'<hr>';	
+	    }		
+	} else {
+    foreach( $mdfiles as $naventry ) {
+	$slug = substr($naventry,0,-3);
+	$navcontent = file_get_contents($naventry);
+	$parser = new Mni\FrontYAML\Parser(); 
+	$nav_raw = $parser->parse($navcontent);
+	$nav_settings = $nav_raw->getYAML();
+        echo '<li><a href="'.($settings ["siteurl"]).'/'. $pwd . '/'
+	.basename($slug).'"><h3>'
+        .$nav_settings ["title"].'</h3></a>'
+        .'<i class="fa fa-calendar"></i> '.$nav_settings ["date"]
+        .'<i class="fa fa-file-o"></i> '.$nav_settings ["contenttype"].'<br />'
+        .'<i class="fa fa-user"></i> '.$nav_settings ["author"].'</li>'.'<hr>';
+    	    }
+	};
+	
+
+//    $path = $settings ["sitepath"] . '/content/' . $pwd '/*.md';
+//    function build_menu( $path ){
+//      $files = glob( $path );
+//     foreach( $files as $file )
+//      {
+//        echo $file;
+
+//      if (is_dir ($file))
+//      build_menu ($file);
+//      }
+//    };
+
+// build_menu($path);
+
+
+//    foreach (new RecursiveIteratorIterator(new RecursiveDirectoryIterator($settings ["sitepath"] . '/content/' . $pwd . '/')) as $filename)
+//{
+    // filter out "." and ".."
+//    if ($filename->isDir()) continue;
+
+//    $slug = substr($filename,0,-3);
+//        $filecontent = file_get_contents($filename);
+//        $parser = new Mni\FrontYAML\Parser();
+//        $file_raw = $parser->parse($filecontent);
+//        $file_settings = $file_raw->getYAML();
+//        echo '<li><a href="'.($settings ["siteurl"]).'/'. $pwd . '/'
+//        .basename($slug).'">'
+//        .$file_settings ["title"].'</a></li> ';
+//    };
+   
+?>
+
