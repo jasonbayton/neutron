@@ -8,7 +8,7 @@ category: System
 tags: home, welcome, hello, frontpage
 ---
 
-# Welcome to you new Neutron site!
+# Welcome to your new Neutron site!
 
 <div class="bs-callout bs-callout-info">
 <h4>This is a system page</h4>
