@@ -1,10 +1,10 @@
 ---
 title: "What is MDM?" 
-contenttype: page
+contenttype: featuredimage
 author: Jason Bayton
 date: 23/08/2016
 category: Enterprise Mobility
-featuredimage: /images/general/whatismdm/whatismdm.jpg
+featuredimage: /content/images/general/whatismdm/whatismdm.jpg
 tags:
 ---
 

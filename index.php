@@ -7,7 +7,11 @@ $pwd = trim ( $pwd ,'/' );
 /*if($_SERVER['SERVER_NAME']==$pwd){*/
 
 if($currenturl=='/'){
-$contents = file_get_contents('home.md');
+	if(file_exists($settings ["sitepath"] . '/content/home.md')){
+	$contents = file_get_contents($settings ["sitepath"] . '/content/home.md');
+	} else {
+	$contents = file_get_contents('home.md');
+	}
 } else if (file_exists($settings ["sitepath"] . '/content/' . $pwd . '.md')){
 $contents = file_get_contents($settings ["sitepath"] . '/content/' . $pwd . '.md');
 } else if($currenturl=='/sitemap'){
