@@ -8,9 +8,12 @@ category: System
 tags: home, welcome, hello, frontpage
 ---
 
-# Homepage
+# Welcome to you new Neutron site!
 
-Welcome to the website!
+<div class="bs-callout bs-callout-info">
+<h4>This is a system page</h4>
+<p>To overwrite this page, create a new file named `home.md` in `/content/` with your desired content.</p>
+</div>
 
 This is a static site generated from __flat files__ that live within the `content` folder.
 
