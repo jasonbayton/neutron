@@ -525,6 +525,10 @@ video {
 	display: block;
 }
 
+#sidebar0 h2 {
+	padding-top: 0px;
+}
+
 #sidebar-wrapper {
 	color: #fff;
 }
