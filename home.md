@@ -38,7 +38,7 @@ To define the title, author, date, featured image and other information for the 
   category: Welcome
 ```
 
-_Content type_ is a theme feature that allows a page to be displayed differently. Normally pages will use the `default` option which corresponds directly to the `default.php` file in the theme `base` directory. To change the content type, simply provide the name of the relevant theme php file without `.php` on the end. Try it out with this file - change `default` to `wide` in `home.md` and see how it looks!
+_Content type_ is a theme feature that allows a page to be displayed differently. Normally pages will use the `default` or `page` option which corresponds directly to the `default.php` or `page.php` file in the theme `base` directory. To change the content type, simply provide the name of the relevant theme php file without `.php` on the end. Try it out with this file - change `featuredimage` to `page` in `home.md` and see how it looks!
 
 The built-in theme is fully responsive, images and embedded media automatically _just fit_, the design is minimal yet beautiful and the readability for both mobile and desktop visitors is perfect.
 
