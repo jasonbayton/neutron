@@ -10,7 +10,7 @@ tags: home, welcome, hello, frontpage
 
 # Welcome to your new Neutron site!
 
-<div class="bs-callout bs-callout-info">
+<div class="bs-callout bs-callout-danger">
 <h4>This is a system page</h4>
 <p>To overwrite this page, create a new file named <code>home.md</code> in <code>/content/</code> with your desired content.</p>
 </div>
