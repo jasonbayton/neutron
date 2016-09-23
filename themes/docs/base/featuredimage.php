@@ -16,10 +16,7 @@
 			<div class="featured-image">
 				<?php include $theme ["themefragments"] . 'featured-image.php';?>
 			</div>
-			<div id="sidebar0">
-		            <h2>Contents</h2>
-        		</div>
-
+			<?php include $theme ["themefragments"] . 'page-contents.php';?>
 			<div id="the-post-contents">
 				<?php echo $mk_content ?>
 			</div>
