@@ -1,7 +1,7 @@
 <?php
 	$settings = array(
-			'sitename' => 'bayton',
-			'siteurl' => 'http://mdmresource.com',
+			'sitename' => 'Neutron',
+			'siteurl' => 'http://neutron.bayton.org',
 			'sitepath' => $_SERVER['DOCUMENT_ROOT'],
 			'theme' => 'docs',
 			'copyright' => '&copy; 2008-<?php echo date("Y") ?>',
