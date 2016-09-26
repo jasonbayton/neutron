@@ -2,4 +2,4 @@ composer.phar
 /vendor
 /content
 /images
-
+/config/config.php
