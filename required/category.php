@@ -4,14 +4,14 @@ $path = $settings ["sitepath"] . '/content/' . $pwd;
                 function recursive_menu( $path, $pwd, $settings ){
                 $dirs = glob( $path . "/*");
 		$realfile = glob( $path."/*.md" );
-		$emptycat = "<div class=\"bs-callout bs-callout-danger\">                                                                           <h4>No documents available</h4>                                                                                         <p>There are no documents in this category. Try another below.</p>
+		$emptycat = "<div class=\"bs-callout bs-callout-danger\">                                                                           <h4>No documents available</h4>                                                                                         <p>There are no documents in this category. Try another from the category navigation or go up a level..</p>
                 	    </div>";
+		if (!$realfile) {
+		echo $emptycat;
+		} else {
 			foreach ($realfile as $ri){
 				$slug = substr($ri,0,-3);
 		                $subfile = glob( $slug . "/*.md");
-			 	if (!$realfile) {
-				echo $emptycat;
-				};	
 				$ricontent = file_get_contents($ri);
         			$parser = new Mni\FrontYAML\Parser();
         			$ri_raw = $parser->parse($ricontent);
@@ -23,8 +23,6 @@ $path = $settings ["sitepath"] . '/content/' . $pwd;
         			.'<i class="fa fa-calendar"></i> '.$ri_settings ["date"]
         			.'<i class="fa fa-file-o"></i> '.$ri_settings ["contenttype"]
         			.'<i class="fa fa-user"></i> '.$ri_settings ["author"].'</li>'.'<hr>';
-
-				//echo '<li>'.$ri.'</li>';
 
 				foreach ($subfile as $si){
 					$subslug = substr($si,0,-3);
@@ -43,8 +41,6 @@ $path = $settings ["sitepath"] . '/content/' . $pwd;
                                 	.'<i class="fa fa-file-o"></i> '.$si_settings ["contenttype"]
                                 	.'<i class="fa fa-user"></i> '.$si_settings ["author"].'</li>'.'<hr>';
 
-					//echo '<li>'.$si.'</li>';
-
 					foreach ($sub_subfile as $mi){
 						$sub_subslug = substr($mi,0,-3);
 						echo '<ul class="the-category-indent">';
@@ -62,7 +58,6 @@ $path = $settings ["sitepath"] . '/content/' . $pwd;
                                 		.'<i class="fa fa-file-o"></i> '.$mi_settings ["contenttype"]
                                 		.'<i class="fa fa-user"></i> '.$mi_settings ["author"].'</li>'.'<hr>';
 						
-						//echo '<li>'.$mi.'</li>';
 						echo '</ul>';
 					};
                        			echo '</ul>';
@@ -70,7 +65,7 @@ $path = $settings ["sitepath"] . '/content/' . $pwd;
 				echo '</ul>';  	
 			}		
 		}
-                	
+                }	
 	
         recursive_menu( $path, $pwd, $settings );
 ?>
