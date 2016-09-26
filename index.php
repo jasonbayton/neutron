@@ -7,17 +7,17 @@ $pwd = trim ( $pwd ,'/' );
 /*if($_SERVER['SERVER_NAME']==$pwd){*/
 
 if($currenturl=='/'){
-	if(file_exists($settings ["sitepath"] . '/content/home.md')){
-	$contents = file_get_contents($settings ["sitepath"] . '/content/home.md');
-	} else {
+	if(file_exists('home.md')){
 	$contents = file_get_contents('home.md');
+	} else {
+	$contents = file_get_contents($settings ["sitepath"] . '/syspage/home.md');
 	}
 } else if (file_exists($settings ["sitepath"] . '/content/' . $pwd . '.md')){
 $contents = file_get_contents($settings ["sitepath"] . '/content/' . $pwd . '.md');
 } else if($currenturl=='/sitemap'){
 $contents = file_get_contents('sitemap.md');
 } else {
-$contents = file_get_contents('404.md');
+$contents = file_get_contents($settings ["sitepath"] . '/syspage/404.md');
 }
 $parser = new Mni\FrontYAML\Parser(); 
 
