@@ -1,6 +1,7 @@
 <?php
 	$settings = array(
 			'sitename' => 'Neutron',
+			'sitetitle' => 'Neutron',
 			'siteurl' => 'http://neutron.bayton.org',
 			'sitepath' => $_SERVER['DOCUMENT_ROOT'],
 			'theme' => 'docs',

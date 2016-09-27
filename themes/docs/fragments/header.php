@@ -4,9 +4,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="<?php echo $mk_settings ["author"]; ?>">
 
-    <title><?php echo $settings ["sitename"] . ' | ' . $mk_settings ["title"]; ?></title>
+    <title><?php echo $settings ["sitetitle"] . ' | ' . $mk_settings ["title"]; ?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo $theme ["htmlresources"]; ?>css/bootstrap.min.css" type="text/css" rel="stylesheet">
