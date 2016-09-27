@@ -1,7 +1,7 @@
 <div id="sidebar-wrapper">
 	<div id="logo">
 		<div id="identity">
-			<a href="/"><i class="fa fa-book" aria-hidden="true"></i> MDM Resource</a>
+			<a href="/"><?php echo $settings ["sitename"] ?></a>
 		</div>
  	<!--?php include $theme ["themefragments"] . 'nav-button.php';?-->
 	  <div class="content">
@@ -27,9 +27,13 @@
 	</div>
 	<div class="nav-head">
 	<h4>Category navigation</h4>
+	<?php if($currenturl=='/'){
+	echo 'Select a category above to begin';
+	} else {?>
 	<ul class="sidebar-nav">
-        	<?php include ($settings ["sitepath"] . '/required/category-nav.php'); ?>    
+        <?php include ($settings ["sitepath"] . '/required/category-nav.php');?> 
 	</ul>
-        </div>
+	<?php } ?>
+	</div>
 </div>
 
