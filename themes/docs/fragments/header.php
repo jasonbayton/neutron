@@ -19,7 +19,10 @@
         
         <!-- Font Awesome -->
     <link rel="stylesheet" href="<?php echo $theme ["htmlresources"]; ?>css/font-awesome.min.css" type="text/css">
-
+    
+    <?php if (file_exists($settings ["sitepath"] . '/config/analytics.php')){
+	include ($settings ["sitepath"] . '/config/analytics.php');
+    } ?>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

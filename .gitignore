@@ -3,6 +3,7 @@ composer.phar
 /content
 /images
 /config/config.php
+/config/analytics.php
 /home.md
 /favicon.ico
 
