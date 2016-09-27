@@ -607,6 +607,7 @@ video {
 	text-indent: 20px;
     	line-height: 40px;
 	padding-bottom: 10px;
+	border-left: 20px solid #f3f3f3;
 }
 
 .the-category ul li:hover{
@@ -619,8 +620,12 @@ ul.content-base {
 }
 
 ul.the-category-indent li {
-    	background: #f0f0f0;
+	border-left: 20px solid #f3f3f3;
 }
 ul.the-category-indent {
     	padding-left: 30px;
+}
+
+li.not-cat {
+	border-left: 20px solid #bd0000!important;
 }

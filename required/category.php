@@ -26,7 +26,7 @@ $path = $settings ["sitepath"] . '/content/' . $pwd;
         			.'<i class="fa fa-files-o"></i> '.$ri_settings ["contenttype"]
         			.'<i class="fa fa-user"></i> '.$ri_settings ["author"].'</li>'.'<hr>';
 				} else {
-				echo '<li><a href="'.($settings ["siteurl"]).'/'. $pwd . '/'
+				echo '<li class="not-cat"><a href="'.($settings ["siteurl"]).'/'. $pwd . '/'
                                 .basename($slug).'"><h3>'
                                 .$ri_settings ["title"].'</h3></a>'
                                 .'<i class="fa fa-calendar"></i> '.$ri_settings ["date"]
@@ -51,7 +51,7 @@ $path = $settings ["sitepath"] . '/content/' . $pwd;
                                 	.'<i class="fa fa-files-o"></i> '.$si_settings ["contenttype"]
                                 	.'<i class="fa fa-user"></i> '.$si_settings ["author"].'</li>'.'<hr>';
 					} else {
-					echo '<li><a href="'.($settings ["siteurl"]).'/'. $pwd . '/'
+					echo '<li class="not-cat"><a href="'.($settings ["siteurl"]).'/'. $pwd . '/'
                                         .basename($slug).'/'
                                         .basename($subslug).'"><h3>'
                                         .$si_settings ["title"].'</h3></a>'
@@ -77,7 +77,7 @@ $path = $settings ["sitepath"] . '/content/' . $pwd;
                                 		.'<i class="fa fa-files-o"></i> '.$mi_settings ["contenttype"]
                                 		.'<i class="fa fa-user"></i> '.$mi_settings ["author"].'</li>'.'<hr>';
 						} else {
-						echo '<li><a href="'.($settings ["siteurl"]).'/'. $pwd . '/'
+						echo '<li class="not-cat"><a href="'.($settings ["siteurl"]).'/'. $pwd . '/'
                                                 .basename($slug).'/'
                                                 .basename($subslug).'/'
                                                 .basename($sub_subslug).'"><h3>'
