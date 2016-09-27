@@ -2,7 +2,7 @@
             <div class="row">
                 <div class="col-lg-12">
                       <div class="pull-right">
-                         <p>Made with <i class="fa fa-heart text-danger"></i> by <a href="//twitter.com/jasonbayton">@JasonBayton</a>. Material is <i class="fa fa-copyright"></i> <a href="https://bayton.org">Jason Bayton</a> under <i class="fa fa-creative-commons" aria-hidden="true"></i> <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a></p>
+                         <p>Made with <i class="fa fa-heart text-danger"></i> by <a href="//twitter.com/jasonbayton">@JasonBayton</a>. <?php echo $settings ["copyright"] ?></p>
                       </div>
                 </div>
                         </div>

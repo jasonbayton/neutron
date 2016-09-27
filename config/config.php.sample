@@ -4,7 +4,7 @@
 			'siteurl' => 'http://neutron.bayton.org',
 			'sitepath' => $_SERVER['DOCUMENT_ROOT'],
 			'theme' => 'docs',
-			'copyright' => '&copy; 2008-<?php echo date("Y") ?>',
+			'copyright' => 'Material is <i class="fa fa-copyright"></i> <a href="https://bayton.org">Jason Bayton</a> & <a href="https://github.com/jasonbayton/neutron.bayton.org">Contributors</a> under <i class="fa fa-creative-commons" aria-hidden="true"></i> <a href="https://creativecommons.org/licenses/by-sa/3.0/">BY-SA</a>',
 
 		/* Do not edit below */
 
