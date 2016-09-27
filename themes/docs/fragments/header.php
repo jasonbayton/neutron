@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title></title>
+    <title><?php echo $settings ["sitename"] . ' | ' . $mk_settings ["title"]; ?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo $theme ["htmlresources"]; ?>css/bootstrap.min.css" type="text/css" rel="stylesheet">
