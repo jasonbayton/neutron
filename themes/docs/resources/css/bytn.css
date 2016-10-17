@@ -604,9 +604,8 @@ video {
 
 .the-category ul li {
 	list-style: none;
-	text-indent: 20px;
-    	line-height: 40px;
-	padding-bottom: 10px;
+    	padding-left: 20px;
+	line-height: 40px;
 	border-left: 20px solid #f3f3f3;
 }
 
@@ -619,6 +618,10 @@ ul.content-base {
 	padding-left: 0;
 }
 
+ul.content-base h3 {
+    padding: 10px 0;
+}
+
 ul.the-category-indent li {
 	border-left: 20px solid #f3f3f3;
 }
@@ -628,4 +631,9 @@ ul.the-category-indent {
 
 li.not-cat {
 	border-left: 20px solid #bd0000!important;
+}
+
+.meta-list {
+	padding-right: 15px;
+	display: inline;
 }
