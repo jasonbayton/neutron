@@ -1,8 +1,10 @@
 <?php
 $path = $settings ["sitepath"] . '/content/' . $pwd;
-
+		
                 function recursive_menu( $path, $pwd, $settings ){
-                $dirs = glob( $path . "/*");
+                $number = 1;
+		$number++;
+		$dirs = glob( $path . "/*");
 		$realfile = glob( $path."/*.md" );
 			foreach ($realfile as $ri){
 				$slug = substr($ri,0,-3);
@@ -14,11 +16,11 @@ $path = $settings ["sitepath"] . '/content/' . $pwd;
         			$ri_settings ["contenttype"] = ucfirst($ri_settings ["contenttype"]);
 				echo '<ul class="nav-content-base">';
 				if ($ri_settings ["contenttype"]=='Category'){
-				echo '<li><a data-toggle="collapse" data-target="#submenu">'
+				echo '<li><a data-toggle="collapse" data-target="sub-'.$number.'">'
         			.$ri_settings ["title"].'<span class="caret"></span></a>'
         			.'</li>';
 				}
-				echo '<div id="submenu" class="collapse">';
+				echo '<div id="sub-'.$number.'" class="collapse">';
 				foreach ($subfile as $si){
 					$subslug = substr($si,0,-3);
 					$sub_subfile = glob( $subslug . "/*.md");
@@ -59,8 +61,7 @@ $path = $settings ["sitepath"] . '/content/' . $pwd;
 				echo '</ul>';  	
 			}		
 		
-                }	
-	
+                }		
         recursive_menu( $path, $pwd, $settings );
 ?>
 
