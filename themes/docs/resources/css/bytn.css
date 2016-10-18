@@ -637,3 +637,14 @@ li.not-cat {
 	padding-right: 15px;
 	display: inline;
 }
+
+ul.nav-content-base {
+	margin-bottom: 0;
+	list-style: none;
+	padding: 0;
+}
+
+ul.nav-category-indent {
+	list-style: none;
+	padding-left: 15px;
+}

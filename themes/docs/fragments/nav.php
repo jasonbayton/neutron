@@ -16,7 +16,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button-->
-                <a class="navbar-brand" href="/"><img class="bytn-logo" src="<?php echo $theme ["htmlresources"]; ?>/images/logo-bytn-blk.png" /><!--usually just Logo-bytn.png--><!--christmas use Logo-bytn-christmas.png--></a>
+                <a class="navbar-brand" href="/"><img class="bytn-logo" src="<?php echo $theme ["htmlresources"]; ?>/images/logo-bytn-blk.png" /></a>
             </div>
             <!-- /.navbar-collapse -->
         </div>

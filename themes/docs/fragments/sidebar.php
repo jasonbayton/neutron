@@ -3,7 +3,6 @@
 		<div id="identity">
 			<a href="/"><?php echo $settings ["sitename"] ?></a>
 		</div>
- 	<!--?php include $theme ["themefragments"] . 'nav-button.php';?-->
 	  <div class="content">
         <div class="in-menu-but">
           <a class="home-but btn btn-default" href="/">
@@ -22,7 +21,7 @@
 	<div class="nav-head">
 	<h4>Global navigation</h4>
 	<ul class="sidebar-nav">
-        	<?php include ($settings ["sitepath"] . '/required/nav.php'); ?>
+        	<?php include ($settings ["sitepath"] . '/required/nav-cat.php'); ?>
         </ul>
 	</div>
 	<div class="nav-head">
