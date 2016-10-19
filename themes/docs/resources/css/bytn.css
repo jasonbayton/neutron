@@ -668,12 +668,13 @@ li.nav-art {
     padding-left: 5px;
 }
 
-li.nav-art a{
-	border-left: 5px solid #bd0000;
-	padding-left: 5px;
-}
-
 .sidebar-nav li {
     padding-left: 0px;
     line-height: 40px;
 }
+
+li.nav-art a{
+        border-left: 5px solid #bd0000;
+        padding-left: 5px;
+}
+
