@@ -672,6 +672,7 @@ ul.nav-category-indent {
 li.nav-art a{
         border-left: 5px solid #bd0000;
         padding-left: 5px;
+	margin-bottom: 4px;
 }
 
 li.nav-art {
