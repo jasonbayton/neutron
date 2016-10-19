@@ -25,14 +25,11 @@
         </ul>
 	</div>
 	<div class="nav-head">
-	<h4>Category navigation</h4>
-	<?php if($currenturl=='/'){
-	echo 'Select a category above to begin';
-	} else {?>
-	<ul class="sidebar-nav">
-        <?php include ($settings ["sitepath"] . '/required/category-nav.php');?> 
-	</ul>
-	<?php } ?>
+	<h4>Article navigation</h4>
+	<?php if ($mk_settings ["contenttype"]=='page'){
+	echo '<div id="sidebar0"></div>';}
+ 
+	?>
 	</div>
 </div>
 

@@ -13,7 +13,7 @@
                     <div class="col-lg-12">
                         <h1 class="bytn-content-title"><?php echo $mk_settings ["title"]; ?></h1>
 			<?php include $theme ["themefragments"] . 'meta.php';?>
-			<?php include $theme ["themefragments"] . 'page-contents.php';?>
+			<!--?php include $theme ["themefragments"] . 'page-contents.php';?-->
 			<div id="the-post-contents">
 				<?php echo $mk_content ?>
 			</div>

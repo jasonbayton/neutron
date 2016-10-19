@@ -1,7 +1,7 @@
 <?php
 $path = $settings ["sitepath"] . '/content';
 		
-                function recursive_menu( $path, $pwd, $settings ){
+                function nav_menu( $path, $pwd, $settings ){
                 $number = 1;
 		$dirs = glob( $path . "/*");
 		$realfile = glob( $path."/*.md" );
@@ -19,7 +19,11 @@ $path = $settings ["sitepath"] . '/content';
 				echo '<li><a data-toggle="collapse" data-target="#sub'.$number.'">'
         			.$ri_settings ["title"].'<span class="caret"></span></a>'
         			.'</li>';
-				};
+				} else {
+				echo '<li class="nav-art"><a href="'.($settings ["sitepath"]).'/content' . '/'
+                                .basename($slug).'">'
+                                .$ri_settings ["title"].'</a></li>';
+				}
 				echo '<div id="sub'.$number.'" class="collapse">';
 				foreach ($subfile as $si){
 					$number++;
@@ -35,7 +39,11 @@ $path = $settings ["sitepath"] . '/content';
 					echo '<li><a data-toggle="collapse" data-target="#subsub-'.$number.'">'
                                 	.$si_settings ["title"].'<span class="caret"></span></a>'
                                 	.'</li>';
-					}
+        	                        } else {
+	                                echo '<li class="nav-art"><a href="'.($settings ["siteurl"]) .'/'
+                	                .basename($slug).'/'.basename($subslug).'">'
+                        	        .$si_settings ["title"].'</a></li>';
+                                	}
 					echo '<div id="subsub-'.$number.'" class="collapse">';
 					foreach ($sub_subfile as $mi){
 						$number++;
@@ -51,7 +59,11 @@ $path = $settings ["sitepath"] . '/content';
 						echo '<li><a data-toggle="collapse" data-target="#subsubsub-'.$number.'">'
                                         	.$mi_settings ["title"].'<span class="caret"></span></a>'
                                 		.'</li>';
-						}
+	                                	} else {
+        	                        	echo '<li class="nav-art"><a href="'.($settings ["siteurl"]) .'/'
+                	                	.basename($slug).'/'.basename($subslug).'/'.basename($sub_subslug).'">'
+                        	        	.$mi_settings ["title"].'</a></li>';
+                                		}
 						echo '<div id="subsubsub-'.$number.'" class="collapse">';
                                         	foreach ($subsub_subfile as $ci){
                                                 	$number++;
@@ -60,13 +72,17 @@ $path = $settings ["sitepath"] . '/content';
                                                 	$cicontent = file_get_contents($ci);
                                                 	$parser = new Mni\FrontYAML\Parser();
                                                 	$ci_raw = $parser->parse($cicontent);
-                                                	$ci_settings = $mi_raw->getYAML();
+                                                	$ci_settings = $ci_raw->getYAML();
                                                 	$ci_settings ["contenttype"] = ucfirst($ci_settings ["contenttype"]);
                                                 	if ($ci_settings ["contenttype"]=='Category'){
                                                 	echo '<li><a data-toggle="collapse" data-target="#subsubsub-'.$number.'">'
                                                 	.$ci_settings ["title"].'<span class="caret"></span></a>'
                                                 	.'</li>';
-                                                	}
+                       	                                } else {
+        	                        		echo '<li class="nav-art"><a href="'.($settings ["siteurl"]).'/'
+ 	                               			.basename($slug).'/'.basename($subslug).'/'.basename($sub_subslug).'/'.basename($subsub_subslug).'">'
+                	               			.$ci_settings ["title"].'</a></li>';
+                        			        };
 
 							echo '</ul>';
 						};
@@ -82,6 +98,6 @@ $path = $settings ["sitepath"] . '/content';
 			}		
 		
                 }		
-        recursive_menu( $path, $pwd, $settings );
+        nav_menu( $path, $pwd, $settings );
 ?>
 

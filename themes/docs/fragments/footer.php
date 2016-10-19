@@ -85,7 +85,7 @@ function createToC(){
 		//Attach that as an id to the H2
 		$(this).attr('id', anchorId);
 		//Create an anchor for this
-		var anch = '<a href="#' + anchorId + '">' + linnerHTML + '</a>';
+		var anch = '<div class="contents-wrapper"><a href="#' + anchorId + '">' + linnerHTML + '</a></div>';
 		//Append it to the Table of Contents Wrapper
 		$(window.tableWrapperId).append(anch);
 	});
