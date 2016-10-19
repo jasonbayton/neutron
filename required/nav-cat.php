@@ -20,7 +20,7 @@ $path = $settings ["sitepath"] . '/content';
         			.$ri_settings ["title"].'<span class="caret"></span></a>'
         			.'</li>';
 				} else {
-				echo '<li class="nav-art"><a href="'.($settings ["sitepath"]).'/content' . '/'
+				echo '<li class="nav-art"><a href="'.($settings ["siteurl"]).'/'
                                 .basename($slug).'">'
                                 .$ri_settings ["title"].'</a></li>';
 				}
