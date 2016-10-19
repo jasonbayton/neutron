@@ -16,7 +16,7 @@
 			<div class="featured-image">
 				<?php include $theme ["themefragments"] . 'featured-image.php';?>
 			</div>
-			<?php include $theme ["themefragments"] . 'page-contents.php';?>
+			<!--?php include $theme ["themefragments"] . 'page-contents.php';?-->
 			<div id="the-post-contents">
 				<?php echo $mk_content ?>
 			</div>

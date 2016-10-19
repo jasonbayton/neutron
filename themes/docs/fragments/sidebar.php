@@ -17,19 +17,15 @@
         </div>
 </div>
 </div>
+        <?php if ($mk_settings ["contenttype"]=='page'){
+        echo '<div class="nav-head"><h4>Article navigation</h4><div id="sidebar0"></div></div>';}
+        ?>
 
 	<div class="nav-head">
 	<h4>Global navigation</h4>
 	<ul class="sidebar-nav">
         	<?php include ($settings ["sitepath"] . '/required/nav-cat.php'); ?>
         </ul>
-	</div>
-	<div class="nav-head">
-	<h4>Article navigation</h4>
-	<?php if ($mk_settings ["contenttype"]=='page'){
-	echo '<div id="sidebar0"></div>';}
- 
-	?>
 	</div>
 </div>
 
